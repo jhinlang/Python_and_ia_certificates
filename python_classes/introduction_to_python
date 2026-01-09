@@ -1,0 +1,87 @@
+# Variable declaration
+name = 'John Doe'
+age = 25
+
+# Variable name important rules
+# - Variable names can only start with a letter or underscore
+# - Variables names can only containe alphanumeric char and underscore
+# - Variables names are case sensitive
+# - Variables names cannot be one of Python's reserved keywords(if,class,def)
+# ---- If you break any of those rules, your python program will throw a SyntaxError
+
+# Variables names should be in lowercase, and snakecase
+my_variable_name = 'freeCodeCamp'
+
+# Use descriptive variable name
+
+user_age = 30 # and not ua
+
+# u can use i, j, k, or some letters in loop
+
+# Comments start with a '#', to multiple comments created with multiple single line comment
+
+
+# Print function
+
+print("Hello world")
+
+# Is possible to show multiple values with print
+
+print("My favorite colors are ","green","blue","yellow")
+
+#Python will automatically add space to replace commas in output
+#The output will be :
+#My favorite colors are green blue yellow
+
+#Python is a dynamically-typed language
+name = "John Doe" # Python knows this is a string bcs ""
+age = 25 # Python knows this is an integer 
+
+# Its faster and more flexible than other languages like c# or java or c
+# But that can lead to errors only when programms run
+# Python don't compile, execute line by line
+
+my_integer_var = 10
+print("Integer:", my_integer_var) # Integer : 10
+
+my_float_var = 6,9
+print("Float :", my_float_var) #Float : 6,9
+
+my_string_var = "hello world"
+print("String :", my_string_var) # String : hello world
+
+my_boolean_var = True
+print("Boolean :", my_boolean_var) # Boolean : True
+
+my_set_var = {7, 5, 8}
+print("Set :", my_set_var) # Set : {7, 5, 8}
+
+my_dictionnary_var = {"name" : "Alice", "age" : 25}
+print("Dictionary", my_dictionnary_var) # Dictionnary: {"name": "Alice", "age": 25}
+
+my_tuple_var = (7, 5, 8)
+print("Tuple :", my_tuple_var) # Tuple: (7, 5, 8)
+
+my_range_var = range(5)
+print("Range :", my_range_var) # Range : range(0, 5)
+
+my_list = [22, "Hello world", 3.14, True]
+print(my_list) # [22, "Hello world", 3.14, True]
+
+my_none_var = None
+print('None :', my_none_var) # None: None
+
+my_var_1 = "Hello world"
+my_var_2 = 21
+
+print(type(my_var_1)) # <class 'str'>
+print(type(my_var_2)) # <class 'int'>
+
+# type:  display the type of variable
+
+#integrated function isinstance() allow to check if a variable is a specific data type 
+
+isinstance('Hello world', str) #True
+isinstance(42, int) #True
+isinstance(True, bool) #True
+isinstance('John Doe', int) #False

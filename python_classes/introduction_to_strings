@@ -1,0 +1,188 @@
+# In Python "" and '' are the same thing 
+my_str_1 = "hello" #hello
+my_str_2 = 'hello' #hello
+
+# If you need a multi-line string, use triple double or simple quote
+my_str_3 = """hello
+world"""
+my_str_4 = '''hello
+world'''
+
+#if your string contain quote, you can use inverse quote
+msg = "It's a sunny day"
+quote = 'She said, "Hello world!"'
+
+# You can escape the single or double quote with a backslash \
+msg = 'It\' a sunny day'
+quote= "She said \"hello world\""
+
+# in operator allow us to search if a string contain one or more character
+my_str = 'Hello world'
+
+print('hello' in my_str) # True
+print('hey' in my_str) #False
+print('he' in my_str) #False
+print('e' in my_str) #True
+print('f' in my_str) #False
+
+# To get the length of a string, you can use the built in len()
+
+my_str = "hello world"
+print(len(my_str)) # 11
+
+# Each character got a position called index, first char is 0, to get access at one char use [] followed by number
+my_str = "Hello world"
+print(my_str[0]) # H
+print(my_str[6]) # w
+
+# You can negatively index it too 
+
+my_str = "hello world"
+print(my_str[-1]) # d
+print(my_str[-2]) # l
+
+# In python, the strings value can be modified, and you can reassign it
+greeting = 'hi'
+greeting = 'hello'
+print(greeting) # hello
+
+# But can't modify directly the string by the index
+
+greeting = 'hi'
+greeting[0] = 'H' # TypeError: 'str' object does not support item 
+
+# In Python, you can concatene 2 strings with + 
+my_str_1 = 'Hello'
+my_str_2 = 'world'
+str_plus_str = my_str_1 + ' '+ my_str_2 
+print(str_plus_str) # Hello world
+
+# NB this work with only string and string not string and number
+name = 'John Doe'
+age = 25
+name_and_age = name + ' '+ age
+print(name_and_age) # TypeError: can only concatenate str
+
+# if we want to add name and age, we must convert age with str()
+name = 'John Doe'
+age = 25
+name_and_age = name + ' ' + str(age)
+print(name_and_age) # John Doe 25
+
+# We can use += too for the concatenation, its does the affectation and the concatenation in one time
+name = 'John Doe'
+age = 26
+
+name_and_age = name + ' ' #start with name
+name_and_age += str(age) #append the age as string
+
+print(name_and_age) #John Doe26
+
+#string interpolation, its f-strings, allow us to manage interpolation with compact syntax
+name = 'Julien'
+age = 27
+name_and_age = f'My name is {name} and i am {age} years old' # Mon nom est julien et j'ai 27 ans
+print(name_and_age)
+
+num1 = 50
+num2 = 100
+
+print(f'The sum of {num1} and {num2} is {num1 + num2}') # The sum of 50 and 100 is 150
+
+
+# String slicing lets you extract a portion of a string or work 
+string[start:stop]
+
+my_str = 'hello holberton'
+print(my_str[0:5]) # hello
+
+# we can too omit the start or the stop, python will start since 0 or end
+my_str = 'hello holberton'
+print(my_str[7:]) #lberton
+
+# slicing doesn't modify the variable
+
+# You can add a step parameter 
+string[start:stop:step]
+
+my_str = 'hello world'
+print(my_str[0:11:2]) #hlowrd  ''print 1/2 letter
+
+# A helpful trick is to reverse a string with this step like : 
+my_str = "hello world"
+print(my_str[::-1]) # dlrow olleh
+
+# There are a number of built-in to work with strings
+
+#upper() put in uppercase
+uppercase_my_str = my_str.upper()
+print(uppercase_my_str) #HELLO WORLD
+
+#lower() put in lowercase
+lower_my_str = my_str.lower()
+print(lower_my_str) #hello world
+
+#strip can remove trailing and leading spaces
+my_str = '  hello world  '
+trimmed_my_str = my_str.strip()
+print(trimmed_my_str) #'hello world'
+
+#replace('old', 'new') an old string by a new
+my_str = 'hello guys'
+replace_my_str = my_str.replace('guys', 'buddys')
+print(replace_my_str) # hello buddys
+
+#split(separator)
+my_str = 'hello everyone all i want for christmas'
+split_words = my_str.split()
+print(split_words) # ['hello', 'everyone', 'all', 'i', 'want', 'for', 'christmas']
+
+#join(iterable)
+my_list = ['hello', 'world']
+joined_my_str = 'o  '.join(my_list)
+print(joined_my_str) # hello o world
+
+#startswith(prefix) check if the string start with(prefix)
+my_str = 'hello world'
+starts_with_hello = my_str.startswith('hello')
+print(starts_with_hello) #True
+
+#endswith(suffix) check if the string end with(suffix)
+my_str = "hello world"
+ends_with_world = my_str.endswith('world')
+print(ends_with_world) #True
+
+#find(substring) returns the index of the first occurrence of substring or -1 if it doesn't find
+my_str = 'hello world'
+
+world_index = my_str.find('world')
+print(world_index)  # 6
+
+#count(substring) returns the number of times a substring appears in a string
+my_str = 'hello world'
+
+o_count = my_str.count('o')
+print(o_count) # 2
+
+#capitalize() Returns a new string with the first character capitalized and the other characters lowercased
+my_str ='hello world'
+
+capitalized_my_str = my_str.capitalize()
+print(capitalized_my_str) # Hello world
+
+# isuppper() Returns True if all letters in the string are uppercase and false if not
+my_str = 'hello world'
+
+is_all_upper = my_str.isupper()
+print(is_all_upper) # False
+
+# islower() Returns True if all letters in the string are lower
+my_str = 'hello world'
+is_all_lower = my_str.islower()
+print(is_all_lower) # True
+
+# title() Returns a new string with the first letter of each word capitalized
+my_str = 'hello world'
+is_title = my_str.title()
+print(is_title) # Hello World
+
